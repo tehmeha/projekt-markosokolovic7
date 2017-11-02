@@ -1,5 +1,5 @@
-# naziv projekta
-- projetnik zadatak SSSS Tehmeha
-- team members: Ime Prezime
+# Izracun u elektrotehnici
+- projetnik zadatak SSSS Tehmeha 3FB
+- team members: Marko Sokolovic, David Šugar
 - programming language: C++
-- description: Opis
+- description: bit cemo najbolji

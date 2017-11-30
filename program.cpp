@@ -4,26 +4,34 @@ double ohmov_zakon(double U,double R)
 {
       return ohmov_zakon=U/R;
 }
+double snaga(double R,double I)
+{
+    return snaga=I*I*R;
+}
+double energija_rad(double P,double t)
+{
+    return energija_rad=P*t;
+}
+double veza_napona(double U,double d)
+{
+    return veza_napona=U/d;
+}
 int main()
 {
     cout<<"1.- Ohmov zakon "<<endl;
     cout<<"2.-Ukupni otpor paralelno spojenih otpora   "<<endl;
-    cout<<"3.-Derivator "<<endl;
-    cout<<"4.-Tezinsko zbrajalo "<<endl;
-    cout<<"5.-Racunsko pojacalo u neinvertirajucoj zatvorenoj petlji "<<endl;
-    cout<<"6.-Gustoca magnetskog toka(magnetska indukcija) "<<endl;
-    cout<<"7.- Jakost magnetskog polja unutar ravnog vodica "<<endl;
-    cout<<"8.- Stupanj iskoristivosti realnog stroja "<<endl;
-    cout<<"9.- Brzina vrtnje sinkronog stroja "<<endl;
-    cout<<"10.- Klizanje asinkronog motora"<<endl;
+    cout<<"3.-Snaga "<<endl;
+    cout<<"4.-Energija,rad "<<endl;
+    cout<<"5.-Veza napona i jakos elektricnog polja "<<endl;
+
     int odabir;
-    cout<<"Odaberite broj 1-10 s odgovarajucom formulom!"<<endl;
+    cout<<"Odaberite broj 1-5 s odgovarajucom formulom!"<<endl;
     cin>>odabir;
-    int U,R,R1,R2,Ruk;
+    int U,R,R1,R2,Ruk,I,struja,Ukupni_otpor,P,t,e_r,d;
      switch(odabir)
     {
     case 1:
-        cout<<"Ohmov zakon";
+        cout<<"Ohmov zakon"<<endl;
         cout<<"Upisite vrijednosti napona(U) "<<;
         cin>>U;
         cout<<"Upisite vrijednosti otopra(R)"<<;
@@ -32,65 +40,42 @@ int main()
         cout<<"Struja zadanih vrijednosti je: "<<struja<<endl;
         break;
     case 2:
-         cout<<"Ukupni otpor 2 paralelno spojenih otpora  ";
+         cout<<"Ukupni otpor 2 paralelno spojenih otpora  "<endl;
          cout<<"Upisite vrijednosti dva otpornika: "<<;
         cin>>R1<<R2;
         1/Ruk=1/R1+1/R2;
         1/Ruk=Ukupni_otpor
         cout<<"Otpor zadanih vrijednosti je: "<<Ukupni_otpor<<endl;
         break;
-    case 3:
-         cout<<"Derivator";
-         cout<<"Upisite vrijednosti"<<;
-        cin>>a;
-        cout<<"Iznos u dolarima je: "<<a/7.02;
-        break;
+    case 3:Veza napona i jakosti elektriènog polja
+         cout<<"Snaga"<<endl;
+         cout<<"Upisite vrijednosti struje(I): ";
+         cin>>I;
+         cout<<"Upisite vrijednosti otpora(R): ";
+         cin>>R;
+         snagaP=snaga(R,I)
+         cout<<"Izracunata snaga je: "<<snagaP;
+         break;
     case 4:
-         cout<<"Tezinsko zbrajalo";
-         cout<<"Upisite vrijednosti"<<;
-        cin>>a;
-        cout<<"Iznos u eurima je: "<<(9.01*a)/7.56;
+         cout<<"Energija,rad"<<endl;
+         cout<<"Upisite vrijednosti snage: ";
+         cin>>P;
+         cout<<"Upisite vrijednosti vremena u sekundama: ";
+         cin>>t;
+         e_r=energija_rad(P,t)
+        cout<<"Izracunata energija(rad) je: "<<e_r;
         break;
     case 5:
-         cout<<"Racunsko pojacalo u neinvertirajucoj zatvorenoj petlji";
-         cout<<"Upisite vrijednosti"<<;
-        cin>>a;
-        cout<<"Iznos u dolarima je: "<<(9.01*a)/7.02;
-        break;
-    case 6:
-         cout<<"Gustoca magnetskog toka(magnetska indukcija)";
-         cout<<"Upisite vrijednosti"<<;
-        cin>>a;
-        cout<<"Iznos u dolarima je: "<<(a*7.02)/7.56;
-        break;
-    case 7:
-         cout<<"Jakost magnetskog polja unutar ravnog vodica";
-         cout<<"Upisite vrijednosti"<<;
-        cin>>a;
-        cout<<"Iznos u kunama je: "<<a*9.01;
-        break;
-    case 8:
-        cout<<"Stupanj iskoristivosti realnog stroja";
-        cout<<"Upisite vrijednosti"<<;
-        cin>>a;
-        cout<<"Iznos u kunama je: "<<a*7.02;
-        break;
-    case 9:
-         cout<<"Brzina vrtnje sinkronog stroja";
-         cout<<"Upisite vrijednosti"<<;
-        cin>>a;
-        cout<<"Iznos u kunama je: "<<a*7.56;
-        break;
-    case 10:
-         cout<<"Klizanje asinkronog motora";
-         cout<<"Upisite vrijednosti"<<;
-        cin>>a;
-        cout<<"Iznos u funtama je: "<<(a*7.02)/9.01;
-        break;
-
+        cout<<"Veza napona i jakosti elektriènog polja"<<endl;
+        cout<<"Upisite vrijednosti napona(U): ";
+        cin>>U;
+        cout<<"Upisite vrijednosti promjera(d): ";
+        cin>>d;
+        veza_napona_i_jakost=veza_napona(U,d)
+        cout<<"Izracunataveza napona i jakost je: "<<veza_napona_i_jakost;
         break;
     default:
-        cout<<"Upisujes samo brojeve od 1-10 kretencino blesava"<<endl;
+        cout<<"Upisujes samo brojeve od 1-5 kretencino blesava"<<endl;
     }
     return 0;
 }

@@ -1,5 +1,9 @@
 #inlude<iostream>
 using namespace std;
+double ohmov_zakon(double U,double R)
+{
+      return ohmov_zakon=U/R;
+}
 int main()
 {
     cout<<"1.- Ohmov zakon "<<endl;
@@ -15,7 +19,7 @@ int main()
     int odabir;
     cout<<"Odaberite broj 1-10 s odgovarajucom formulom!"<<endl;
     cin>>odabir;
-    int U,R,
+    int U,R,R1,R2,Ruk;
      switch(odabir)
     {
     case 1:
@@ -24,7 +28,7 @@ int main()
         cin>>U;
         cout<<"Upisite vrijednosti otopra(R)"<<;
         cin>>R;
-        struja=U/R;
+        struja=ohmov_zakon(U,R)
         cout<<"Struja zadanih vrijednosti je: "<<struja<<endl;
         break;
     case 2:
